@@ -1,0 +1,39 @@
+# Local .terraform directories
+**/.terraform/*
+!.terraform/*.tfstate
+
+# Terraform State Files
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform plan files
+*.tfplan
+
+# # Sensitive variables files
+# *.tfvars
+# *.tfvars.json
+
+# Environment override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Backup files
+*.backup
+
+# # Lock files
+# .terraform.lock.hcl
+
+# Mac/Windows system files (optional but recommended)
+.DS_Store
+Thumbs.db
+
+# SSH keys (if stored in repo for temp use—ideally avoid)
+*.pem
+*.pub
