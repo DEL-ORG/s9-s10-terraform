@@ -1,5 +1,5 @@
 resource "aws_instance" "this" {
-  count = 3
+  # count = 3
   ami                    = var.ami_id
   instance_type          = var.instance_type
   key_name               = var.key_name

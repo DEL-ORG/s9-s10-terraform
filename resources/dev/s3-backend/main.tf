@@ -1,10 +1,10 @@
-## Terraform block
 terraform {
-  required_version = ">= 1.0.0"
+  required_version = ">= 1.10.5"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = "~> 5.0"
     }
   }
 }
@@ -25,8 +25,7 @@ locals {
   aws_region_backup = "us-east-2"
   force_destroy     = true
   common_tags = {
-    "id"             = "2024"
-    "owner"          = "s8"
+    "owner"          = "s9"
     "environment"    = "development"
     "project"        = "del"
     "create_by"      = "Terraform"

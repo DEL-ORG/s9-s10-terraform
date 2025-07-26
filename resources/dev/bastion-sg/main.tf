@@ -13,6 +13,16 @@ provider "aws" {
   region = var.aws_region
 }
 
+terraform {
+  backend "s3" {
+    bucket         = "development-del-s9-tf-state"
+    key            = "bastion-sg/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "development-del-s9-tf-state-lock"
+    encrypt        = true
+  }
+}
+
 module "sg" {
   source = "../../../modules/sg"
 

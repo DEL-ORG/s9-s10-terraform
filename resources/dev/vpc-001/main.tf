@@ -13,6 +13,15 @@ provider "aws" {
   region = var.aws_region
 }
 
+terraform {
+  backend "s3" {
+    bucket         = "development-del-s9-tf-state"
+    key            = "vpc/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "development-del-s9-tf-state-lock"
+    encrypt        = true
+  }
+}
 
 module "vpc" {
   source = "../../../modules/vpc"
