@@ -67,8 +67,8 @@ module "ec2" {
   ami_id                 = "ami-0c94855ba95c71c99"
   instance_type          = "t2.micro"
   key_name               = "terraform-aws"
-  subnet_id              = data.terraform_remote_state.vpc.outputs.public_subnets[0]
-  # subnet_id              = data.terraform_remote_state.vpc.outputs.public_subnets_1
+  subnet_id              = data.terraform_remote_state.vpc.outputs.public_subnet_1
+  # subnet_id              = data.terraform_remote_state.vpc.outputs.public_subnet[1]
   vpc_security_group_ids = [module.sg.id]
 
   volume_size = 20
