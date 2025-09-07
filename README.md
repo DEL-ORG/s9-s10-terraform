@@ -33,6 +33,7 @@ DOWNLOAD_URL="https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terr
 
 INSTALL_DIR="/usr/local/bin"
 echo "Downloading Terraform ${TERRAFORM_VERSION}..."
+please note that im testing 
 curl -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip ${DOWNLOAD_URL}
 unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 sudo mv terraform ${INSTALL_DIR}/terraform
